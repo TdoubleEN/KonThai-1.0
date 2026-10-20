@@ -1,0 +1,4 @@
+interface:
+  display_name: "KonThai"
+  short_description: "Natural Thai and English, with meaning intact"
+  default_prompt: "Use $konthai to polish this text in my voice while preserving its facts and intent."
