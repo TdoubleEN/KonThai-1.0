@@ -1,0 +1,268 @@
+{
+  "date": "2026-10-20",
+  "baseline": "public KonThai 1.0.0 at 08e832476c751277e27554279550983d02c9dea2",
+  "candidate": "1.1.0",
+  "model": "gpt-6.1-sol",
+  "reasoning_effort": "high",
+  "mode": "SKILL.md + Thai reference supplied in full; no tool calls",
+  "cases": [
+    {
+      "id": "structure",
+      "request": "เรียบเรียงใหม่เป็นคำอธิบายเทคนิคกึ่งทางการ ให้อ่านลื่นโดยรักษาลำดับเหตุการณ์",
+      "text": "การที่ระบบจะเริ่มทำงานในส่วนของการส่งข้อความแจ้งเตือนนั้นจะเกิดขึ้นเมื่อคิวเต็ม โดยระบบจะตรวจคิวทุก 5 นาที โดยระบบจะรอให้การตรวจครั้งปัจจุบันเสร็จก่อนที่จะเริ่มการตรวจครั้งถัดไป"
+    },
+    {
+      "id": "owners",
+      "request": "เกลาให้อ่านชัดเจน ห้ามสลับข้อมูลของรุ่นหรือผู้รับผิดชอบ",
+      "text": "รุ่น A ใช้น้ำ 350 มล. ส่วนรุ่น B ใช้น้ำ 800 มล. โดยรุ่น A จะหยุดเมื่อวาล์ว A ปิด แต่รุ่น B ยังทำงานต่อ ทีมวิศวกรรมตรวจรุ่น A ส่วนทีมคุณภาพตรวจรุ่น B"
+    },
+    {
+      "id": "third-person",
+      "request": "เกลาเป็นรายงานภายในเกี่ยวกับเจ้าของร้าน ไม่ใช่ข้อความขายที่พูดกับลูกค้า",
+      "text": "ในส่วนของเจ้าของร้านที่เข้าร่วมการทดลอง 12 คน มี 4 คนที่ยังไม่พบเมนูรายงาน แต่ยังไม่มีข้อมูลว่าเป็นเพราะชื่อเมนูหรือตำแหน่งบนหน้าจอ จึงยังไม่ควรสรุปว่าทุกคนใช้งานยาก"
+    },
+    {
+      "id": "direct-address",
+      "request": "เกลาเป็นแคปชั่นแบรนด์ที่พูดกับผู้อ่านโดยตรง โทนอบอุ่นและกระชับ เก็บ CTA ตามเดิม",
+      "text": "เราช่วยให้คุณดูรายการค้างส่งในหน้าจอเดียว เจ้าของร้านจึงไม่ต้องเปิดหลายหน้า ผู้ใช้ยังเลือกดูเฉพาะรายการของวันนี้ได้ สอบถามรายละเอียดที่ https://example.com/contact #ตัวอย่าง"
+    },
+    {
+      "id": "formal",
+      "request": "เกลาเป็นบันทึกประชุมทางการ รักษาสถานะการอนุมัติและผู้รับผิดชอบ",
+      "text": "ที่ประชุมมีมติให้ฝ่ายจัดซื้อขอใบเสนอราคา 2 รายเพื่อประกอบการพิจารณา ทั้งนี้ยังไม่มีการอนุมัติงบประมาณ และให้ฝ่ายการเงินตรวจสอบวงเงินก่อนเสนอผู้มีอำนาจลงนาม"
+    },
+    {
+      "id": "proofread",
+      "request": "ตรวจภาษาเท่านั้น คงหัวข้อ ลำดับย่อหน้า และคำถามเดิม",
+      "text": "ทำไมผลวันนี้ถึงต่างจากเมื่อวาน?\n\nในส่วนของขั้นแรก ให้จดค่าที่ตั้งและเวลาที่ทดสอบก่อน\n\nอย่างไรก็ตาม ถ้ายังไม่มีผลเปรียบเทียบ ห้ามสรุปว่าการตั้งค่านี้ดีกว่า"
+    },
+    {
+      "id": "uncertainty",
+      "request": "เกลาให้สั้นลง แต่เก็บเงื่อนไขที่ยังไม่ยืนยันครบ",
+      "text": "ขณะนี้วาง Workshop ไว้ช่วง 28–30 พฤศจิกายน 2026 เป็นช่วงเผื่อวางแผน ไม่ใช่กิจกรรมสามวัน ยังไม่ยืนยันวัน สถานที่ ผู้สอน และวิธีเข้าร่วม การส่งเครื่องอาจล่าช้า จึงยังไม่ยืนยันคิวถ่าย"
+    },
+    {
+      "id": "approved",
+      "request": "แก้เฉพาะจุดจำเป็น เก็บน้ำเสียง คำลงท้าย CTA และแฮชแท็กเดิม",
+      "text": "อยากลองใช้งาน แวะมาทดลองและคุยกับทีมได้ค่ะ\nสอบถามรายละเอียดที่ https://example.com/contact\n#ตัวอย่าง #Example"
+    },
+    {
+      "id": "english",
+      "request": "Polish the technical note. Preserve facts, uncertainty, code and URL.",
+      "text": "It is important to note that to verify the snapshot, run `python restore.py --verify-only`. This does not write restored files. It may reveal a missing payload file, but it does not prove that every tool will work on a new computer. See https://example.com/docs?v=1.2."
+    },
+    {
+      "id": "voice",
+      "request": "เกลาเป็นบันทึกส่วนตัว ใช้เสียงผู้เขียนที่เป็นกันเองและลงท้ายครับตามเดิม ห้ามเติมประสบการณ์",
+      "text": "ผมลองระบบนี้เมื่อวาน โดยผมยังไม่ได้ทดสอบตอนที่มีผู้ใช้พร้อมกันเยอะ ๆ นอกจากนี้ผมยังไม่รู้ว่าคิวจะเต็มเมื่อไร ผมจึงอยากลองต่ออีกนิดก่อนสรุปครับ"
+    }
+  ],
+  "outputs": {
+    "baseline": [
+      {
+        "id": "structure",
+        "text": "ระบบจะเริ่มส่งข้อความแจ้งเตือนเมื่อคิวเต็ม โดยตรวจคิวทุก 5 นาที และรอให้การตรวจครั้งปัจจุบันเสร็จก่อนเริ่มการตรวจครั้งถัดไป"
+      },
+      {
+        "id": "owners",
+        "text": "รุ่น A ใช้น้ำ 350 มล. และจะหยุดเมื่อวาล์ว A ปิด ส่วนรุ่น B ใช้น้ำ 800 มล. และยังทำงานต่อ ทีมวิศวกรรมตรวจรุ่น A ส่วนทีมคุณภาพตรวจรุ่น B"
+      },
+      {
+        "id": "third-person",
+        "text": "เจ้าของร้านที่เข้าร่วมการทดลอง 12 คน มี 4 คนที่ยังไม่พบเมนูรายงาน แต่ยังไม่มีข้อมูลว่าเป็นเพราะชื่อเมนูหรือตำแหน่งบนหน้าจอ จึงยังไม่ควรสรุปว่าทุกคนใช้งานยาก"
+      },
+      {
+        "id": "direct-address",
+        "text": "เราช่วยให้คุณดูรายการค้างส่งในหน้าจอเดียว ไม่ต้องเปิดหลายหน้า และเลือกดูเฉพาะรายการของวันนี้ได้\nสอบถามรายละเอียดที่ https://example.com/contact #ตัวอย่าง"
+      },
+      {
+        "id": "formal",
+        "text": "ที่ประชุมมีมติให้ฝ่ายจัดซื้อขอใบเสนอราคาจากผู้เสนอราคา 2 รายเพื่อประกอบการพิจารณา โดยยังไม่มีการอนุมัติงบประมาณ และให้ฝ่ายการเงินตรวจสอบวงเงินก่อนเสนอผู้มีอำนาจลงนาม"
+      },
+      {
+        "id": "proofread",
+        "text": "ทำไมผลวันนี้ถึงต่างจากเมื่อวาน?\n\nขั้นแรก ให้จดค่าที่ตั้งและเวลาที่ทดสอบ\n\nอย่างไรก็ตาม ถ้ายังไม่มีผลเปรียบเทียบ ห้ามสรุปว่าการตั้งค่านี้ดีกว่า"
+      },
+      {
+        "id": "uncertainty",
+        "text": "Workshop ใช้ช่วง 28–30 พฤศจิกายน 2026 เป็นกรอบวางแผน ไม่ใช่กิจกรรมสามวัน ยังไม่ยืนยันวัน สถานที่ ผู้สอน และวิธีเข้าร่วม การส่งเครื่องอาจล่าช้า จึงยังไม่ยืนยันคิวถ่าย"
+      },
+      {
+        "id": "approved",
+        "text": "อยากลองใช้งาน แวะมาทดลองและคุยกับทีมได้ค่ะ\nสอบถามรายละเอียดที่ https://example.com/contact\n#ตัวอย่าง #Example"
+      },
+      {
+        "id": "english",
+        "text": "To verify the snapshot, run `python restore.py --verify-only`. This does not write restored files. It may reveal a missing payload file, but it does not prove that every tool will work on a new computer. See https://example.com/docs?v=1.2."
+      },
+      {
+        "id": "voice",
+        "text": "ผมลองระบบนี้เมื่อวาน แต่ยังไม่ได้ทดสอบตอนมีผู้ใช้พร้อมกันเยอะ ๆ และยังไม่รู้ว่าคิวจะเต็มเมื่อไร เลยอยากลองต่ออีกนิดก่อนสรุปครับ"
+      }
+    ],
+    "candidate": [
+      {
+        "id": "structure",
+        "text": "ระบบจะเริ่มส่งข้อความแจ้งเตือนเมื่อคิวเต็ม โดยตรวจคิวทุก 5 นาที และรอให้การตรวจครั้งปัจจุบันเสร็จก่อนเริ่มการตรวจครั้งถัดไป"
+      },
+      {
+        "id": "owners",
+        "text": "รุ่น A ใช้น้ำ 350 มล. ส่วนรุ่น B ใช้น้ำ 800 มล. เมื่อวาล์ว A ปิด รุ่น A จะหยุด แต่รุ่น B ยังทำงานต่อ ทีมวิศวกรรมตรวจรุ่น A ส่วนทีมคุณภาพตรวจรุ่น B"
+      },
+      {
+        "id": "third-person",
+        "text": "เจ้าของร้านที่เข้าร่วมการทดลอง 12 คน มี 4 คนที่ยังไม่พบเมนูรายงาน แต่ยังไม่มีข้อมูลว่าเป็นเพราะชื่อเมนูหรือตำแหน่งบนหน้าจอ จึงยังไม่ควรสรุปว่าทุกคนใช้งานยาก"
+      },
+      {
+        "id": "direct-address",
+        "text": "เราช่วยให้คุณดูรายการค้างส่งในหน้าจอเดียว ไม่ต้องเปิดหลายหน้า และเลือกดูเฉพาะรายการของวันนี้ได้\nสอบถามรายละเอียดที่ https://example.com/contact #ตัวอย่าง"
+      },
+      {
+        "id": "formal",
+        "text": "ที่ประชุมมีมติให้ฝ่ายจัดซื้อขอใบเสนอราคาจากผู้เสนอราคา 2 รายเพื่อประกอบการพิจารณา โดยยังไม่มีการอนุมัติงบประมาณ และให้ฝ่ายการเงินตรวจสอบวงเงินก่อนเสนอผู้มีอำนาจลงนาม"
+      },
+      {
+        "id": "proofread",
+        "text": "ทำไมผลวันนี้ถึงต่างจากเมื่อวาน?\n\nขั้นแรก ให้จดค่าที่ตั้งและเวลาที่ทดสอบก่อน\n\nอย่างไรก็ตาม ถ้ายังไม่มีผลเปรียบเทียบ ห้ามสรุปว่าการตั้งค่านี้ดีกว่า"
+      },
+      {
+        "id": "uncertainty",
+        "text": "ขณะนี้ใช้ช่วง 28–30 พฤศจิกายน 2026 เป็นกรอบวางแผน Workshop ไม่ใช่กิจกรรมสามวัน ยังไม่ยืนยันวัน สถานที่ ผู้สอน และวิธีเข้าร่วม การส่งเครื่องอาจล่าช้า จึงยังไม่ยืนยันคิวถ่าย"
+      },
+      {
+        "id": "approved",
+        "text": "อยากลองใช้งาน แวะมาทดลองและคุยกับทีมได้ค่ะ\nสอบถามรายละเอียดที่ https://example.com/contact\n#ตัวอย่าง #Example"
+      },
+      {
+        "id": "english",
+        "text": "To verify the snapshot, run `python restore.py --verify-only`. This does not write restored files. It may reveal a missing payload file, but it does not prove that every tool will work on a new computer. See https://example.com/docs?v=1.2."
+      },
+      {
+        "id": "voice",
+        "text": "ผมลองระบบนี้เมื่อวาน แต่ยังไม่ได้ทดสอบตอนที่มีผู้ใช้พร้อมกันเยอะ ๆ และยังไม่รู้ว่าคิวจะเต็มเมื่อไร เลยอยากลองต่ออีกนิดก่อนสรุปครับ"
+      }
+    ]
+  },
+  "metrics": {
+    "baseline-guided": {
+      "usage": {
+        "input_tokens": 22459,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1307,
+        "reasoning_output_tokens": 681
+      },
+      "total_input_plus_output": 23766,
+      "flags": {}
+    },
+    "candidate-guided": {
+      "usage": {
+        "input_tokens": 22396,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1129,
+        "reasoning_output_tokens": 495
+      },
+      "total_input_plus_output": 23525,
+      "flags": {}
+    }
+  },
+  "blind_review": {
+    "reviewer": "one model subagent; randomized A/B labels; did not receive mapping or guides",
+    "results": [
+      {
+        "pair": "final:structure",
+        "preference": "tie",
+        "preferred_version": "tie",
+        "material_issue_A": false,
+        "material_issue_B": false,
+        "reason": "ไม่มีความต่างที่ควรเลือก"
+      },
+      {
+        "pair": "final:owners",
+        "preference": "B",
+        "preferred_version": "candidate",
+        "material_issue_A": false,
+        "material_issue_B": false,
+        "reason": "ผูกการทำงานของทั้งสองรุ่นกับเงื่อนไขเดียวกันชัดกว่า"
+      },
+      {
+        "pair": "final:third-person",
+        "preference": "tie",
+        "preferred_version": "tie",
+        "material_issue_A": false,
+        "material_issue_B": false,
+        "reason": "ไม่มีความต่างที่ควรเลือก"
+      },
+      {
+        "pair": "final:direct-address",
+        "preference": "tie",
+        "preferred_version": "tie",
+        "material_issue_A": false,
+        "material_issue_B": false,
+        "reason": "ไม่มีความต่างที่ควรเลือก"
+      },
+      {
+        "pair": "final:formal",
+        "preference": "tie",
+        "preferred_version": "tie",
+        "material_issue_A": false,
+        "material_issue_B": false,
+        "reason": "ไม่มีความต่างที่ควรเลือก"
+      },
+      {
+        "pair": "final:proofread",
+        "preference": "A",
+        "preferred_version": "candidate",
+        "material_issue_A": false,
+        "material_issue_B": false,
+        "reason": "แก้เท่าที่จำเป็นและเก็บคำบอกลำดับเดิม"
+      },
+      {
+        "pair": "final:uncertainty",
+        "preference": "tie",
+        "preferred_version": "tie",
+        "material_issue_A": false,
+        "material_issue_B": false,
+        "reason": "ไม่มีความต่างที่ควรเลือก"
+      },
+      {
+        "pair": "final:approved",
+        "preference": "tie",
+        "preferred_version": "tie",
+        "material_issue_A": false,
+        "material_issue_B": false,
+        "reason": "ไม่มีความต่างที่ควรเลือก"
+      },
+      {
+        "pair": "final:english",
+        "preference": "tie",
+        "preferred_version": "tie",
+        "material_issue_A": false,
+        "material_issue_B": false,
+        "reason": "ไม่มีความต่างที่ควรเลือก"
+      },
+      {
+        "pair": "final:voice",
+        "preference": "tie",
+        "preferred_version": "tie",
+        "material_issue_A": false,
+        "material_issue_B": false,
+        "reason": "ไม่มีความต่างที่ควรเลือก"
+      }
+    ],
+    "summary": {
+      "tie": 8,
+      "candidate": 2
+    },
+    "material_issues": 0,
+    "limitations": "Single-run pilot; same ten cases used during iteration, not a held-out test. Repeated reviewer, no universal quality guarantee."
+  },
+  "default_entrypoint": "identical to 1.0 except version metadata",
+  "limitations": [
+    "One generation per version/context; no held-out cases",
+    "Same reviewer participated during iteration",
+    "Total input includes shared CLI context; output includes reasoning as reported; no causal/general saving claim",
+    "Style review is by a model, not independent human validation"
+  ]
+}

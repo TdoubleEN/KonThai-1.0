@@ -3,7 +3,7 @@ name: konthai
 description: Polish Thai, Thai-English or English prose in the author's voice without changing its meaning. Use for humanizing, proofreading or refining captions, briefs, articles, scripts, emails and presentation text. Works standalone or as the writing polish step of another skill.
 license: MIT
 metadata:
-  version: "1.0.0"
+  version: "1.1.0"
 ---
 
 # KonThai
